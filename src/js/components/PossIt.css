@@ -28,7 +28,7 @@ input {
   justify-content: space-between; 
   align-items: center;       
   padding: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid white;
 }
 
 .btn-eliminar {

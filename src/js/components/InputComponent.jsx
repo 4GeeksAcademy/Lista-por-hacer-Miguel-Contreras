@@ -40,7 +40,7 @@ function eliminarTarea(id) {
           <ul>
             {listaTareas.map((tarea) => (
               <li key={tarea.id} className="tarea-container">
-                <span className="texto-tarea">{tarea.texto}</span>
+                <span>{tarea.texto}</span>
                 <button
                   className="btn-eliminar"
                   onClick={() => eliminarTarea(tarea.id)}

@@ -7,19 +7,22 @@ function InputComponent() {
 
   function enviar(e) {
     e.preventDefault(e);
+    if (texto === "") {
+      alert("Por favor, escribe una tarea.");
+      return;
+    }
     const nuevaTarea = {
       id: Date.now(),
       texto: texto,
     };
     setListaTareas([...listaTareas, nuevaTarea]);
     setTexto("");
+  }
 
-}
-
-function eliminarTarea(id) {
-      const nuevaLista = listaTareas.filter((tarea) => tarea.id !== id);
-      setListaTareas(nuevaLista);
-    };
+  function eliminarTarea(id) {
+    const nuevaLista = listaTareas.filter((tarea) => tarea.id !== id);
+    setListaTareas(nuevaLista);
+  }
 
   return (
     <div className="text-center">
@@ -32,8 +35,10 @@ function eliminarTarea(id) {
         ></input>
       </form>
 
-    
       <div className="lista">
+        <div className="contador-tareas">
+          <p>Total de tareas: {listaTareas.length}</p>
+        </div>
         {listaTareas.length === 0 ? (
           <p>No hay tareas por hacer</p>
         ) : (

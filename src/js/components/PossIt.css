@@ -24,11 +24,10 @@ input {
 }
 
 .tarea-container {
-  display: flex;            
+  display: flex;             
   justify-content: space-between; 
-  align-items: center;       
   padding: 10px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #eee;
 }
 
 .btn-eliminar {
